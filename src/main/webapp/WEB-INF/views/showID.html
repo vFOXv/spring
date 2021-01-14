@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>This shop</title>
+    <style>
+        table, td {
+            border: 1px solid;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h2>This shop:</h2>
+<table>
+    <tr>
+        <td>Name of shop </td>
+        <td th:text="${shop.getName()}"></td>
+    </tr>
+    <tr>
+        <td>Address of shop</td>
+        <td th:text="${shop.getAddress()}"></td>
+    </tr>
+    <tr>
+        <td>Phone of shop</td>
+        <td th:text="${shop.getPhone()}"></td>
+    </tr>
+    <tr>
+        <td>Email of shop</td>
+        <td th:text="${shop.getEmail()}"></td>
+    </tr>
+    <tr>
+        <td>Category of shop</td>
+        <td th:text="${shop.getCategoryShop()}"></td>
+    </tr>
+    <tr>
+        <td>Description of shop</td>
+        <td th:text="${shop.getDescription()}"></td>
+    </tr>
+</table>
+
+
+<a href="/areal">List shop</a>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Shops</title>
+    
+    <style>
+        table, td {
+            border: 1px solid;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h1>SHOPS</h1>
+<table>
+    <th>Name shop</th>
+    <tr th:each="shop : ${shops}">
+        <td th:text="${shop.getId()}"></td>
+        <td><a th:href="@{/areal/{id}(id=${shop.getId()})}" th:text="${shop.getName()}">shop</a></td>
+    </tr>
+</table>
+<br>
+<a href="/areal/new">Add new shop</a>
+
+</body>
+</html>

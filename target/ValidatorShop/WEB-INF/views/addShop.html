@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Add new shop</title>
+</head>
+<body>
+
+
+<form th:action="@{/areal/new}" th:method="POST" th:object="${shop}">
+    <label for="name"> Enter name of shop:</label>
+    <input type="text" th:field="*{name}" id="name">
+    <div style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</div>
+    <br>
+    <label for="address">Enter address of shop:</label>
+    <input type="text" th:field="*{address}" id="address">
+    <div style="color:red" th:if="${#fields.hasErrors('address')}" th:errors="*{address}">Name Error</div>
+    <br>
+    <label for="phone">Enter phone of shop:</label>
+    <input type="text" th:field="*{phone}" id="phone">
+    <div style="color:red" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}">Name Error</div>
+    <br>
+    <label for="email">Enter email of shop:</label>
+    <input type="text" th:field="*{email}" id="email">
+    <div style="color:red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Name Error</div>
+    <br>
+    <label for="categoryShop">Enter category of shop:</label>
+    <input type="text" th:field="*{categoryShop}" id="categoryShop">
+    <div style="color:red" th:if="${#fields.hasErrors('categoryShop')}" th:errors="*{categoryShop}">Name Error</div>
+    <br>
+    <label for="description">Enter description of shop:</label>
+    <input type="text" th:field="*{description}" id="description">
+    <div style="color:red" th:if="${#fields.hasErrors('description')}" th:errors="*{description}">Name Error</div>
+    <br>
+    <input type="submit" value="Add new shop">
+</form>
+</body>
+</html>
